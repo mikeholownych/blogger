@@ -1,0 +1,12 @@
+theme: "modern"
+toolbar1: bold italic underline | link uploadimage | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | undo redo |
+toolbar2: fontselect | forecolor | code | 
+image_advtab: true
+plugins:
+  - link
+  - image
+  - uploadimage
+  - textcolor
+  - code
+  - fullscreen
+  - autolink

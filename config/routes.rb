@@ -6,4 +6,6 @@ Blogger::Application.routes.draw do
   end
   resources :tags
 
+  post '/tinymce_assets' => 'tinymce_assets#create'
+
 end

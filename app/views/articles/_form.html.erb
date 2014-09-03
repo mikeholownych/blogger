@@ -10,7 +10,7 @@
   </p>
   <p>
     <%= f.label :body %><br />
-    <%= f.text_area :body %>
+    <%= f.text_area :body, class: "tinymce" %>
   </p>
   <p>
     <%= f.label :tag_list %><br />
@@ -20,3 +20,5 @@
     <%= f.submit %>
   </p>
 <% end %>
+
+<%= tinymce %>
