@@ -1,36 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Your Photo Studio Blog</title>
-  <%= stylesheet_link_tag    "application", media: "all" %>
-  <%= stylesheet_link_tag "application", :media => "all" %>
-  <link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin' rel='stylesheet' type='text/css'>
-
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<div id="canvas">
-  <div id="header-wrap">
-    <div id="header">
-      <h1 id="site-title"><span><%= link_to 'Your Photo Studio Blog', :root %></span></h1>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= stylesheet_link_tag "application", media: "all",
+                                           "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %>
+  </head>
+  <body>
+    <%= render 'layouts/header' %>
+    <%= render 'layouts/messages' %>
+    <div class="container">
+      <%= yield %>
+      <%= render 'layouts/footer' %>
     </div>
-  </div>
-
-  <div id="primaryContent">
-    <p class="flash"><%= flash.notice %></p>
-
-    <%= yield %>
-
-  </div>
-
-  <div id="secondaryContent">
-
-  </div>
-
-  <div id="footer">
-
-  </div>
-</div>
-</body>
+  </body>
 </html>
